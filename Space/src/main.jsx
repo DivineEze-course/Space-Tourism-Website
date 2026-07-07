@@ -7,7 +7,7 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className="bg-[url('background-home-desktop.jpg')] bg-cover bg-center flex flex-col text-white">
+    <div className="bg-[url('background-home-desktop.jpg')] bg-cover  bg-center flex flex-col text-white">
     <NavBar />
     <Home />
     </div>

@@ -1,16 +1,37 @@
+import { NavLink } from "react-router-dom";
+
+const navItems = [
+  { number: "00", label: "HOME", path: "/" },
+  { number: "01", label: "DESTINATION", path: "/destination" },
+  { number: "02", label: "CREW", path: "/crew" },
+  { number: "03", label: "TECHNOLOGY", path: "/technology" },
+];
+
 export default function NavBar() {
-return (
-    <nav className=" text-white p-4 flex items-center justify-between mt-5 ms-4 ">
-        <div className="flex items-center justify-between mb-4">
-            <img src="logo.svg" alt="Logo" className="h-10 w-10" />
-        </div>
-        
-      <ul className="flex space-x-4 gap-5 bg-opacity-90 backdrop-blur-2xl rounded-lg p-7 w-[800px] -me-4">
-        <li><a href="/" className=" border-b-2 p-7 border-transparent hover:border-white">00 HOME</a></li>
-        <li><a href="/about" className=" border-b-2 p-7 border-transparent hover:border-white">01 DESTINATION</a></li>
-        <li><a href="/contact" className=" border-b-2 p-7 border-transparent hover:border-white">02 CREW</a></li>
-        <li><a href="/contact" className=" border-b-2 p-7 border-transparent hover:border-white">03 TECHNOLOGY</a></li>
+  return (
+    <nav className="flex items-center justify-between p-4 ms-4 text-white">
+      <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
+
+      <ul className="flex gap-5 w-[800px] p-7 rounded-lg backdrop-blur-2xl">
+        {navItems.map((item) => (
+          <li key={item.path}>
+            <NavLink
+              to={item.path}
+              end={item.path === "/"}
+              className={({ isActive }) =>
+                `border-b-2 p-7 transition-colors ${
+                  isActive
+                    ? "border-white"
+                    : "border-transparent hover:border-gray-400"
+                }`
+              }
+            >
+              <span className="font-bold me-2">{item.number}</span>
+              {item.label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
-)
+  );
 }

@@ -2,6 +2,8 @@
 import Destination from './Components/Destination.jsx'
 import Home from './Components/Home.jsx'
 import NavBar from './Components/NavBar.jsx'
+import Crew from './Components/Crew.jsx'
+import Technology from './Components/Technology.jsx'
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import homeBg from "/assets/background-home-desktop.jpg";
@@ -37,8 +39,8 @@ const location = useLocation();
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />} />
-        {/* <Route path="/crew" element={<Crew />} />
-        <Route path="/technology" element={<Technology />} /> */}
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/technology" element={<Technology />} />
       </Routes>
     </div>
   );

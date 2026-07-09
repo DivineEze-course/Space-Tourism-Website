@@ -6,27 +6,72 @@ import Crew from './Components/Crew.jsx'
 import Technology from './Components/Technology.jsx'
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import homeBg from "/assets/background-home-desktop.jpg";
-import destinationBg from "/assets/background-destination-desktop.jpg";
-import crewBg from "/assets/background-crew-desktop.jpg";
-import technologyBg from "/assets/background-technology-desktop.jpg";
+import homeDesktop from "/assets/background-home-desktop.jpg";
+import homeTablet from "/assets/background-home-tablet.jpg";
+import homeMobile from "/assets/background-home-mobile.jpg";
 
+import destinationDesktop from "/assets/background-destination-desktop.jpg";
+import destinationTablet from "/assets/background-destination-tablet.jpg";
+import destinationMobile from "/assets/background-destination-mobile.jpg";
+
+import crewDesktop from "/assets/background-crew-desktop.jpg";
+import crewTablet from "/assets/background-crew-tablet.jpg";
+import crewMobile from "/assets/background-crew-mobile.jpg";
+
+import technologyDesktop from "/assets/background-technology-desktop.jpg";
+import technologyTablet from "/assets/background-technology-tablet.jpg";
+import technologyMobile from "/assets/background-technology-mobile.jpg";
 
 export default function App() {
-const location = useLocation();
+  const location = useLocation();
 
- let background = homeBg;
+  let background;
 
-  switch (location.pathname) {
-    case "/destination":
-      background = destinationBg;
-      break;
-    case "/crew":
-      background = crewBg;
-      break;
-    case "/technology":
-      background = technologyBg;
-      break;
+  if (window.innerWidth < 768) {
+    
+    switch (location.pathname) {
+      case "/destination":
+        background = destinationMobile;
+        break;
+      case "/crew":
+        background = crewMobile;
+        break;
+      case "/technology":
+        background = technologyMobile;
+        break;
+      default:
+        background = homeMobile;
+    }
+  } else if (window.innerWidth < 1024) {
+    
+    switch (location.pathname) {
+      case "/destination":
+        background = destinationTablet;
+        break;
+      case "/crew":
+        background = crewTablet;
+        break;
+      case "/technology":
+        background = technologyTablet;
+        break;
+      default:
+        background = homeTablet;
+    }
+  } else {
+    
+    switch (location.pathname) {
+      case "/destination":
+        background = destinationDesktop;
+        break;
+      case "/crew":
+        background = crewDesktop;
+        break;
+      case "/technology":
+        background = technologyDesktop;
+        break;
+      default:
+        background = homeDesktop;
+    }
   }
 
  return (

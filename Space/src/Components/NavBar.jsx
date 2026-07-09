@@ -9,7 +9,7 @@ const navItems = [
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between p-4 ms-4 text-white font-playful">
+    <nav className="hidden lg:flex items-center justify-between p-4 ms-4 text-white font-playful">
       <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
 
       <ul className="flex gap-15 w-[800px] p-7 rounded-lg backdrop-blur-2xl">

@@ -9,17 +9,17 @@ const navItems = [
 
 export default function NavBar() {
   return (
-    <nav className="flex items-center justify-between p-4 ms-4 text-white">
+    <nav className="flex items-center justify-between p-4 ms-4 text-white font-playful">
       <img src="/logo.svg" alt="Logo" className="w-10 h-10" />
 
-      <ul className="flex gap-5 w-[800px] p-7 rounded-lg backdrop-blur-2xl">
+      <ul className="flex gap-15 w-[800px] p-7 rounded-lg backdrop-blur-2xl">
         {navItems.map((item) => (
           <li key={item.path}>
             <NavLink
               to={item.path}
               end={item.path === "/"}
               className={({ isActive }) =>
-                `border-b-2 p-7 transition-colors ${
+                `border-b-2 pb-7 transition-colors ${
                   isActive
                     ? "border-white"
                     : "border-transparent hover:border-gray-400"

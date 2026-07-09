@@ -12,8 +12,7 @@ export default function Destination() {
       <div className="mb-10 -ms-180 items-center justify-around text-center">
         <p className="text-xl font-light tracking-wider uppercase font-playful font-medium ">
           <span
-            className="text-gray-500 text-2
-            xl"
+            className="text-gray-500 text-2xl"
           >
             01
           </span>{" "}

@@ -5,11 +5,10 @@ export default function Crew() {
   const [selectedCrew, setSelectedCrew] = useState(data.crew[0]);
   return (
     <div className="flex flex-col items-around content-center gap-10">
-    <div className="mb-10 -ms-200 items-center justify-around text-center">
+    <div className="justify-around ms-40" >
         <p className="text-xl font-light tracking-wider uppercase font-playful font-medium ">
           <span
-            className="text-gray-500 text-2
-            xl"
+            className="text-gray-500 text-2xl"
           >
             02
           </span>{" "}

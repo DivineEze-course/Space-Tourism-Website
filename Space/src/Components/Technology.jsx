@@ -37,7 +37,7 @@ export default function Technology() {
         </p>
       </div>
 <div className="order-first md:order-none lg:w-2/5">
-  <img  src={`/assets/image-${technology.name.toLowerCase().replace(' ', '-')}-portrait.jpg`}  />
+  <img  src={technology.images.portrait}  />
 </div>
 
     </div>

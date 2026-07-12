@@ -39,7 +39,7 @@ export default function NavBar() {
     </div>
     {isOpen && (
   <div ref={navRef}
-  className={`fixed top-0 right-0 bg-grey/80 backdrop-blur-lg md:hidden border-l-lg transition-transform duration-300 ease ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+  className={`fixed z-1 p-2 top-0 right-0 bg-grey/80 backdrop-blur-lg md:hidden border-l-lg transition-transform duration-300 ease ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
     <ul className="flex flex-col gap-8 p-8 text-white uppercase tracking-widest">
       {navItems.map((item) => (
         <li key={item.path}>

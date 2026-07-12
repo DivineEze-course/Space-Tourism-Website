@@ -8,7 +8,7 @@ export default function Destination() {
   );
 
   return (
-    <div className="flex flex-col items-around content-center gap-10 p-5 lg:p-0">
+    <div className="flex flex-col items-around content-center gap-10 p-5 lg:p-0" >
       <div className="mt-10 mb-10 lg:-ms-180 items-center justify-around text-center">
         <p className="text-xl font-light tracking-wider uppercase font-playful font-medium ">
           <span
@@ -19,11 +19,12 @@ export default function Destination() {
           Pick Your Destination
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row lg:justify-around lg:items-center  gap-20 lg:gap-0">
+      <div className="flex flex-col lg:flex-row lg:justify-around lg:items-center lg:mb-20 gap-20 lg:gap-0">
         <div>
           <img
             src={`image-${selectedDestination.name.toLowerCase()}.png`}
             alt={selectedDestination.name}
+            className="animate-spin [animation-duration:120s] "
           />
         </div>
         <div>

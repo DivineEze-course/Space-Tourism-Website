@@ -1,4 +1,4 @@
-import NavBar from "./Navbar.jsx";
+
 export default function Home() {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center text-white text-center lg:text-left gap-20 lg:gap-50 p-10 lg:mt-30">

@@ -44,7 +44,7 @@ export default function Crew() {
           ))}
         </div>
       </div>
-      <img className="order-first md:order-none w-3/4 lg:w-2/5" src={`/assets/image-${selectedCrew.name.toLowerCase().replace(" ", "-")}.png`} alt={selectedCrew.name} />
+      <img className="order-first md:order-none w-3/4 lg:w-2/5" src={selectedCrew.images.png} alt={selectedCrew.name} />
     </div>
     </div>
   );
